@@ -476,6 +476,10 @@ if ( is_readable( $custom_walker_footer ) ) {
 	require_once $custom_walker_footer;
 }
 
+function woocommerce_template_loop_product_title() {
+	echo '<p class="woocommerce-loop-product__title">' . get_the_title() . '</p>';
+}
+
 
 /**
  * Loading All CSS Stylesheets and Javascript Files.

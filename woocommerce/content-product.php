@@ -27,7 +27,7 @@ if (empty($product) || !$product->is_visible()) {
 ?>
 
 <div class="col-12 col-md-6 col-xl-4 order-1 order-xl-1">
-  <div <?php wc_product_class('card h-100 d-flex text-center', $product); ?>>
+  <div <?php wc_product_class('card ', $product); ?>>
     <?php
     /**
      * Hook: woocommerce_before_shop_loop_item.
@@ -35,6 +35,10 @@ if (empty($product) || !$product->is_visible()) {
      * @hooked woocommerce_template_loop_product_link_open - 10
      */
     do_action('woocommerce_before_shop_loop_item');
+
+    ?>
+    <div class="product_image_custom d-flex justify-content-center">
+    <?php
 
     /**
      * Hook: woocommerce_before_shop_loop_item_title.
@@ -45,7 +49,8 @@ if (empty($product) || !$product->is_visible()) {
     do_action('woocommerce_before_shop_loop_item_title');
 
     ?>
-    <div class="card-body d-flex flex-column">
+    </div>
+    <div class="card-body flex-column">
       <?php
       /**
        * Hook: woocommerce_shop_loop_item_title.
@@ -54,6 +59,9 @@ if (empty($product) || !$product->is_visible()) {
        */
       do_action('woocommerce_shop_loop_item_title');
 
+      ?>
+      <div class="d-flex justify-content-between">
+      <?php
       /**
        * Hook: woocommerce_after_shop_loop_item_title.
        *
@@ -70,6 +78,7 @@ if (empty($product) || !$product->is_visible()) {
        */
       do_action('woocommerce_after_shop_loop_item');
       ?>
+      </div>
     </div>
   </div>
 </div>

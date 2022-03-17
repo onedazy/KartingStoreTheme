@@ -52,13 +52,11 @@ $teal: #20c997;
 $cyan: #0dcaf0;
 
 // $primary: #14FFEC;
-$primary: #f0f;
+$primary: #00d3c1;
 $secondary: #0D7377;
 $tertiary: #323232;
-// $body-bg: #212121;
-$body-bg: #f0f;
+$body-bg: #212121;
 $body-color: #F2F2F2;
-
 
 $border-radius: .75rem;
 
@@ -349,12 +347,79 @@ body.admin-bar {
 	}
 }
 
-.card {
+.card{
 	background-color: $tertiary;
+}
+
+.display-none{
+	display: none;
+}
+
+.main-header {
+	width: 100%;
+	.image-background {
+		height: 550px;
+		background-image: url(https://kartingstore.nl/wp-content/uploads/2022/03/kartingstore4.jpg);
+		background-position: center;
+		background-size: cover;
+		.row{
+			padding-top: 100px;
+			h1{
+				margin-bottom: 35px;
+				font-size: 47px;
+			}
+			input{
+				color: $body-bg;
+				background-color: $body-color;
+				padding: 13px;
+				border-radius: 8px!important
+			}
+		}
+	}
+	.categories{
+		margin-top: -250px;
+		.main-category {
+			background-color: $tertiary;
+			border-radius: .75rem;
+			box-shadow: 0px 4px 15px 0px $black;
+			transition: all 1s ease;
+			cursor: pointer;
+			:hover{
+				svg{
+					margin-right: -5px;
+				}
+			}
+			.textual {
+				h2{
+					font-size: 24px;
+					color: $body-color;
+				}
+				p{
+					font-size: 16px;
+					color: $primary;
+					margin-bottom: 0;
+				}
+				svg {
+					height: 20px;
+					margin-top: 2px;
+					margin-left: -9px;
+				}
+			}
+		}
+	}
 }
 
 .woocommerce div.product p.price, .woocommerce div.product span.price{
 	color: $body-color;
+}
+
+.woocommerce-loop-product__title {
+	color: $body-color;
+}
+
+.button.add_to_cart_button{
+	background-color: $secondary!important;
+	color: $primary!important;
 }
 
 /**
