@@ -167,6 +167,7 @@ body.admin-bar {
 }
 
 .navbar-brand {
+	padding-top:0px;
 	img {
 		height: 40px;
 	}
@@ -174,12 +175,6 @@ body.admin-bar {
 
 .navbar-static-top {
 	margin-bottom: $grid-gutter-width;
-}
-
-/* Main */
-
-#main {
-	margin-top: $spacer;
 }
 
 /* Footer */
@@ -347,12 +342,27 @@ body.admin-bar {
 	}
 }
 
+/*** CUSTOM CSS ***/
+
 .card{
 	background-color: $tertiary;
 }
 
 .display-none{
 	display: none;
+}
+
+.header-margin {
+	margin-top: 61px;
+}
+
+.woocommerce-account{
+	.woocommerce-MyAccount-navigation{
+		width: auto;
+	}
+	.woocommerce-MyAccount-content{
+		width: auto;
+	}
 }
 
 .main-header {
@@ -381,7 +391,7 @@ body.admin-bar {
 		.main-category {
 			background-color: $tertiary;
 			border-radius: .75rem;
-			box-shadow: 0px 4px 15px 0px $black;
+			// box-shadow: 0px 4px 15px 0px $black;
 			transition: all 1s ease;
 			cursor: pointer;
 			:hover{
@@ -409,8 +419,76 @@ body.admin-bar {
 	}
 }
 
-.woocommerce div.product p.price, .woocommerce div.product span.price{
-	color: $body-color;
+.navbar {
+	background-color: $body-bg;
+	transition: all 0.2s ease;
+	.nav-item {
+		list-style: none;
+	}
+	.nav-link {
+		padding-left: 0px;
+	}
+	.login{
+		margin-right: 20px;
+	}
+	.cart-customlocation{
+		position: relative;
+		svg{
+			margin-top: -7px;
+		}
+		div{
+			position: absolute;
+			right: -10px;
+			top: -10px;
+			z-index: 1;
+			font-size: 14px;
+			font-weight: 700;
+			background-color: $body-color;
+			border-radius: 30px;
+			padding: 0 7px;
+		}
+		p {
+			padding: 0px;
+			margin: 0px;
+		}
+	}
+
+}
+
+.nav-transparent{
+	background-color: transparent;
+}
+
+.woocommerce {
+	a.button.alt, button.button.alt{
+		background-color: $primary;
+		color: $body-color;
+	}a.button.alt:hover, button.button.alt:hover{
+		background-color:shade-color($primary, 10%);
+	}
+	div.product p.price, div.product span.price{
+		color: $body-color;
+	}
+	.quantity {
+		input.qty{
+			height: 35px;
+		}
+	}
+	button.button:disabled, button.button:disabled[disabled]{
+		color: $gray-800;
+	}
+	button.button:disabled:hover, button.button:disabled[disabled]:hover{
+		color: $gray-800;
+	}
+}
+
+.woocommerce-cart {
+	table.cart {
+		img{
+			border-radius: $border-radius;
+			width: 200px;
+		}
+	}
 }
 
 .woocommerce-loop-product__title {
@@ -426,8 +504,33 @@ body.admin-bar {
  * Responsive Design using "mixins/_breakpoints.scss"
  */
 
-@media (max-width: breakpoint-max(sm)) {
+ @media (max-width: breakpoint-max(sm)) {
 	#sidebar {
 		margin-top: 60px;
+	}
+}
+
+@media (max-width: breakpoint-max(md)) {
+	.main-header {
+		.categories{
+			margin-top: -180px;
+		}
+	}
+	.navbar{
+		background-color: $body-bg;
+	}
+}
+
+@media (min-width: breakpoint-min(md)) {
+	.navbar {
+		.nav-item{
+			.dropdown-menu {
+				display: none; 
+				margin-top: 0;
+			}
+		}
+		.nav-item:hover {
+			.dropdown-menu{ display: block; }
+		}
 	}
 }

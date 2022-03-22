@@ -1,7 +1,6 @@
 // Webpack Imports
 import * as bootstrap from 'bootstrap';
 
-
 ( function () {
 	'use strict';
 
@@ -24,3 +23,14 @@ import * as bootstrap from 'bootstrap';
 		} );
 	} );
 } )();
+
+var myNav = document.getElementById('header');
+window.onscroll = function () { 
+    "use strict";
+    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ){
+        myNav.classList.remove("nav-transparent");
+    } 
+    else {
+        myNav.classList.add("nav-transparent");
+    }
+};

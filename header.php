@@ -5,6 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<?php wp_head(); ?>
+
+
+	<link rel="apple-touch-icon" sizes="180x180" href="https://kartingstore.nl/wp-content/uploads/2022/03/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://kartingstore.nl/wp-content/uploads/2022/03/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://kartingstore.nl/wp-content/uploads/2022/03/favicon-16x16.png">
+	<link rel="manifest" href="https://kartingstore.nl/wp-content/uploads/2022/03/site.webmanifest">
+	<link rel="mask-icon" href="https://kartingstore.nl/wp-content/uploads/2022/03/safari-pinned-tab.svg" color="#00d3c1">
+	<link rel="shortcut icon" href="https://kartingstore.nl/wp-content/uploads/2022/03/favicon.ico">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="msapplication-config" content="https://kartingstore.nl/wp-content/uploads/2022/03/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
 </head>
 
 <?php
@@ -23,55 +34,41 @@
 
 <div id="wrapper">
 	<header>
-		<nav id="header" class="navbar navbar-expand-md <?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
+		<nav id="header" class="navbar fixed-top nav-transparent navbar-dark navbar-expand-md <?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="container">
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<?php
-						$header_logo = get_theme_mod( 'header_logo' ); // Get custom meta-value.
-
-						if ( ! empty( $header_logo ) ) :
-					?>
-						<img src="<?php echo esc_url( $header_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
-					<?php
-						else :
-							echo esc_attr( get_bloginfo( 'name', 'display' ) );
-						endif;
-					?>
+						<img src="https://kartingstore.nl/wp-content/uploads/2022/03/text_white_500.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 				</a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'my-theme' ); ?>">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-				<div id="navbar" class="collapse navbar-collapse">
-					<?php
-						// Loading WordPress Custom Menu (theme_location).
-						wp_nav_menu(
-							array(
-								'theme_location' => 'main-menu',
-								'container'      => '',
-								'menu_class'     => 'navbar-nav me-auto',
-								'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
-								'walker'         => new WP_Bootstrap_Navwalker(),
-							)
-						);
-
-						if ( '1' === $search_enabled && get_page_template() != $main_page ) :
-					?>
-							<form class="search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-								<div class="input-group">
-									<input type="text" name="s" class="form-control" placeholder="<?php esc_attr_e( 'Search', 'my-theme' ); ?>" title="<?php esc_attr_e( 'Search', 'my-theme' ); ?>" />
-									<button type="submit" name="submit" class="btn btn-outline-secondary"><?php esc_html_e( 'Search', 'my-theme' ); ?></button>
-								</div>
-							</form>
-					<?php
-						endif;
-					?>
+				<div id="navbar" class="collapse navbar-collapse justify-content-between">
+					<li class="nav-item dropdown">
+						<a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Alle categorieën </a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+							<li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+							<li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+						</ul>
+					</li>
+					<div>
+						<a class="nav-item login" href="/my-account">inloggen</a>
+						<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">
+							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-dash-fill" viewBox="0 0 16 16">
+								<path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.5 7h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1z"/>
+							</svg>
+							<div>
+								<p><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></p>
+							</div>
+						</a>
+					</div>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container -->
 		</nav><!-- /#header -->
 	</header>
-	<main id="main" <?php if(get_page_template() != $main_page): echo "class='container'"; endif; if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' style="padding-top: 100px;"'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' style="padding-bottom: 100px;"'; endif; ?>>
+	<main id="main" <?php if(get_page_template() != $main_page): echo "class='container header-margin'"; endif; if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' style="padding-top: 100px;"'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' style="padding-bottom: 100px;"'; endif; ?>>
 		<?php
 			// If Single or Archive (Category, Tag, Author or a Date based page).
 			if ( is_single() || is_archive() ) :
