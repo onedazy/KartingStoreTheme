@@ -5,10 +5,10 @@
  *
  * @since v1.0
  */
-$theme_customizer = get_template_directory() . '/inc/customizer.php';
-if ( is_readable( $theme_customizer ) ) {
-	require_once $theme_customizer;
-}
+// $theme_customizer = get_template_directory() . '/inc/customizer.php';
+// if ( is_readable( $theme_customizer ) ) {
+// 	require_once $theme_customizer;
+// }
 
 
 /**
@@ -511,3 +511,43 @@ function wps_deregister_styles() {
 	wp_dequeue_style( 'global-styles' );
 }
 add_action( 'wp_enqueue_scripts', 'wps_deregister_styles', 100 );
+
+add_filter( 'woocommerce_product_add_to_cart_text' , 'custom_woocommerce_product_add_to_cart_text' );
+function custom_woocommerce_product_add_to_cart_text() {
+	global $product;
+	
+	$product_type = $product->product_type;
+	
+	switch ( $product_type ) {
+		case 'simple':
+			return __( 'Winkelwagen', 'woocommerce' );
+		break;
+		case 'variable':
+			return __( 'Kies een optie', 'woocommerce' );
+		break;
+		default:
+			return __( 'Read more', 'woocommerce' );
+	}
+}
+
+// Show only lowest prices in WooCommerce variable products
+add_filter( 'woocommerce_variable_sale_price_html', 'wpglorify_variation_price_format', 10, 2 );
+add_filter( 'woocommerce_variable_price_html', 'wpglorify_variation_price_format', 10, 2 );
+ 
+function wpglorify_variation_price_format( $price, $product ) {
+ 
+	// Main Price
+	$prices = array( $product->get_variation_price( 'min', true ), $product->get_variation_price( 'max', true ) );
+	$price = $prices[0] !== $prices[1] ? sprintf( __( '%1$s', 'woocommerce' ), wc_price( $prices[0] ) ) : wc_price( $prices[0] );
+	
+	// Sale Price
+	$prices = array( $product->get_variation_regular_price( 'min', true ), $product->get_variation_regular_price( 'max', true ) );
+	sort( $prices );
+	$saleprice = $prices[0] !== $prices[1] ? sprintf( __( '%1$s', 'woocommerce' ), wc_price( $prices[0] ) ) : wc_price( $prices[0] );
+	
+	if ( $price !== $saleprice ) {
+		$price = '<del>' . $saleprice . $product->get_price_suffix() . '</del>' . $price . $product->get_price_suffix() . '';
+	}
+
+	return $price;
+}

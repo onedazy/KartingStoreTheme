@@ -26,7 +26,7 @@ if (empty($product) || !$product->is_visible()) {
 }
 ?>
 
-<div class="col-12 col-md-6 col-xl-4 order-1 order-xl-1">
+<div class="col-12 col-md-6 col-xl-3 order-1 order-xl-1">
   <div <?php wc_product_class('card ', $product); ?>>
     <?php
     /**

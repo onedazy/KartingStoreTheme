@@ -16,6 +16,10 @@
 	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="msapplication-config" content="https://kartingstore.nl/wp-content/uploads/2022/03/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
+	<meta property="og:image" content="https://kartingstore.nl/wp-content/uploads/2022/03/kartingstore_with_text.jpg">
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:image" content="https://kartingstore.nl/wp-content/uploads/2022/03/kartingstore_with_text.jpg">
+
 </head>
 
 <?php
@@ -48,9 +52,12 @@
 					<li class="nav-item dropdown">
 						<a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Alle categorieën </a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
-							<li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
-							<li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+							<li><a class="dropdown-item" href="/product-category/chassis-onderdelen/"> Chassis & onderdelen </a></li>
+							<li><a class="dropdown-item" href="/product-category/motoren-onderdelen/"> Motoren & onderdelen </a></li>
+							<li><a class="dropdown-item" href="/product-category/tandwielen-kettingen/"> Tandwielen & kettingen </a></li>
+							<li><a class="dropdown-item" href="/product-category/gereedschap/"> Gereedschap </a></li>
+							<li><a class="dropdown-item" href="/product-category/olie-smeermiddelen/"> Olie & smeermiddelen </a></li>
+							<li><a class="dropdown-item" href="/product-category/materialen/"> Bevestigingsmaterialen </a></li>
 						</ul>
 					</li>
 					<div>

@@ -27,7 +27,7 @@ import * as bootstrap from 'bootstrap';
 var myNav = document.getElementById('header');
 window.onscroll = function () { 
     "use strict";
-    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ){
+    if (document.body.scrollTop >= 60 || document.documentElement.scrollTop >= 60 ){
         myNav.classList.remove("nav-transparent");
     } 
     else {
