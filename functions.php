@@ -512,23 +512,23 @@ function wps_deregister_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'wps_deregister_styles', 100 );
 
-add_filter( 'woocommerce_product_add_to_cart_text' , 'custom_woocommerce_product_add_to_cart_text' );
-function custom_woocommerce_product_add_to_cart_text() {
-	global $product;
+// add_filter( 'woocommerce_product_add_to_cart_text' , 'custom_woocommerce_product_add_to_cart_text' );
+// function custom_woocommerce_product_add_to_cart_text() {
+// 	global $product;
 	
-	$product_type = $product->product_type;
+// 	$product_type = $product->product_type;
 	
-	switch ( $product_type ) {
-		case 'simple':
-			return __( 'Winkelwagen', 'woocommerce' );
-		break;
-		case 'variable':
-			return __( 'Kies een optie', 'woocommerce' );
-		break;
-		default:
-			return __( 'Read more', 'woocommerce' );
-	}
-}
+// 	switch ( $product_type ) {
+// 		case 'simple':
+// 			return __( 'Winkelwagen', 'woocommerce' );
+// 		break;
+// 		case 'variable':
+// 			return __( 'Kies een optie', 'woocommerce' );
+// 		break;
+// 		default:
+// 			return __( 'Read more', 'woocommerce' );
+// 	}
+// }
 
 // Show only lowest prices in WooCommerce variable products
 add_filter( 'woocommerce_variable_sale_price_html', 'wpglorify_variation_price_format', 10, 2 );

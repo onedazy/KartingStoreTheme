@@ -391,6 +391,39 @@ body.admin-bar {
 			margin:0;
 		}
 	}
+	.package{
+		svg{
+			color: $green-400;
+		}
+		h5{
+			color: $green-400;
+		}
+		p {
+			color: $green-200;
+		}
+	}
+	.helping{
+		svg{
+			color: $orange-400;
+		}
+		h5{
+			color: $orange-400;
+		}
+		p {
+			color: $orange-200;
+		}
+	}
+	.speed{
+		svg{
+			color: $blue-400;
+		}
+		h5{
+			color: $blue-400;
+		}
+		p {
+			color: $blue-200;
+		}
+	}
 }
 
 .showcase_products{
