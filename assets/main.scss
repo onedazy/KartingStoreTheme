@@ -444,7 +444,22 @@ body.admin-bar {
 		width: auto;
 	}
 }
-
+#footer{
+	margin-top: 150px;
+	input{
+		color: $body-bg;
+		background-color: $body-color;
+		padding: 13px;
+		border-radius: 8px!important;
+		margin-bottom: 20px;
+	}
+	.icon{
+		font-size: 0!important;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		color:$body-color;
+	}
+}
 .main-header {
 	width: 100%;
 	.image-background {
@@ -657,6 +672,16 @@ body.admin-bar {
 }
 .woocommerce .cart-collaterals .cross-sells, .woocommerce-page .cart-collaterals .cross-sells .products.row .col-12.col-md-6.col-xl-3.order-1.order-xl-1{
 	width: 49%;
+}
+
+.products.row {
+	.card.product{
+		.product_image_custom{
+			img{
+				height: fit-content!important;
+			}
+		}
+	}
 }
 
 
