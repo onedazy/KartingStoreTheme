@@ -15,10 +15,20 @@
 	<link rel="shortcut icon" href="https://kartingstore.nl/wp-content/uploads/2022/03/favicon.ico">
 	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="msapplication-config" content="https://kartingstore.nl/wp-content/uploads/2022/03/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
+	<meta name="theme-color" content="#323232">
 	<meta property="og:image" content="https://kartingstore.nl/wp-content/uploads/2022/03/kartingstore_with_text.jpg">
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:image" content="https://kartingstore.nl/wp-content/uploads/2022/03/kartingstore_with_text.jpg">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3PFHE5FZCC"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-3PFHE5FZCC');
+	</script>
 
 </head>
 
@@ -41,7 +51,7 @@
 		<nav id="header" class="navbar fixed-top nav-transparent navbar-dark navbar-expand-md <?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="container">
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="https://kartingstore.nl/wp-content/uploads/2022/03/text_white_500.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+						<img width="95" height="40" src="https://kartingstore.nl/wp-content/uploads/2022/03/text_white_500.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 				</a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'my-theme' ); ?>">
@@ -61,6 +71,7 @@
 						</ul>
 					</li>
 					<div>
+						<a class="nav-item login" href="/klantenservice">klantenservice</a>
 						<a class="nav-item login" href="/my-account"><?php  if(is_user_logged_in() == true ): echo 'mijn account'; endif; if(is_user_logged_in() == false ): echo 'inloggen'; endif; ?></a>
 						<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">
 							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-dash-fill" viewBox="0 0 16 16">

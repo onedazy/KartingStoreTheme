@@ -13,6 +13,7 @@ get_header();
 			<div class="container">
 				<div class="row justify-content-center">
 					<h1 class="text-center">De kartingstore van Nederland</h1>
+					<h2 class="text-center sub-title">Zoek hier kart onderdelen in ons assortiment</h2>
 					<div class="col-md-8 col-lg-4 col-12 g-2 g-md-0">
 						<form class="search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<div class="input-group">

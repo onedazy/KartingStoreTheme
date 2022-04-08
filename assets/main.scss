@@ -356,6 +356,23 @@ body.admin-bar {
 	margin-top: 110px;
 }
 
+.woocommerce-error, .woocommerce-info, .woocommerce-message{
+	background-color: $tertiary;
+	color: $body-color;
+	border-top-color: $primary;
+}
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment{
+	background-color: $tertiary;
+}
+
+.woocommerce-checkout {
+	.form-row input.input-text, .form-row textarea{
+		padding: 5px;
+		border-radius: 5px;
+		background-color: $body-color;
+	}
+}
+
 .usp{
 	margin-top: 100px;
 	padding-top: 25px;
@@ -459,6 +476,31 @@ body.admin-bar {
 		padding-bottom: 15px;
 		color:$body-color;
 	}
+	span.codedirection{
+		unicode-bidi: bidi-override;
+		direction: rtl;
+	}
+	li{
+		list-style: none;
+	}
+}
+.customer-service{
+	background-color: $tertiary;
+	border-top-left-radius: $border-radius;
+	border-top-right-radius: $border-radius;
+	padding: 30px;
+	h1{
+		margin-bottom: 60px;
+	}
+	.accordion-button:not(.collapsed){
+		background-color: $body-bg
+	}
+}
+.accordion-collapse.collapse.show{
+	margin-bottom: 20px;
+}
+.accordion-item{
+	border:none
 }
 .main-header {
 	width: 100%;
@@ -470,8 +512,12 @@ body.admin-bar {
 		.row{
 			padding-top: 100px;
 			h1{
-				margin-bottom: 35px;
 				font-size: 47px;
+			}
+			h2.sub-title{
+				margin-bottom: 40px;
+				font-size: 17px;
+				color: $primary;
 			}
 			input{
 				color: $body-bg;
@@ -558,6 +604,10 @@ body.admin-bar {
 .pswp__caption{
 	display: none;
 }
+.wpcf7-submit{
+
+}
+
 .woocommerce {
 	.product_meta{
 		opacity: .6;
@@ -628,14 +678,13 @@ body.admin-bar {
 	color: $body-color;
 }
 
-.button.add_to_cart_button{
+.button.add_to_cart_button, .wpcf7-submit{
 	background-color: $primary!important;
 	color: $body-color!important;
 }
-.button.add_to_cart_button:hover, .added_to_cart.wc-forward:hover{
+.button.add_to_cart_button:hover, .added_to_cart.wc-forward:hover, .wpcf7-submit:hover{
 	background-color: $nav-link-hover-color!important;
 }
-
 
 .added_to_cart.wc-forward:after{
 	font-family: 'WooCommerce';
@@ -644,7 +693,7 @@ body.admin-bar {
 	vertical-align: bottom;
 }
 
-.added_to_cart.wc-forward{
+.added_to_cart.wc-forward, .wpcf7-submit{
 	font-size: 100%;
 	margin: 0;
 	line-height: 1;
