@@ -20,16 +20,6 @@
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:image" content="https://kartingstore.nl/wp-content/uploads/2022/03/kartingstore_with_text.jpg">
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3PFHE5FZCC"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'G-3PFHE5FZCC');
-	</script>
-
 </head>
 
 <?php
