@@ -27,7 +27,7 @@
 	$navbar_position = get_theme_mod( 'navbar_position', 'static' ); // Get custom meta-value.
 
 	$search_enabled  = get_theme_mod( 'search_enabled', '1' ); // Get custom meta-value.
-	$main_page = '/var/www/html/wp-content/themes/kartingStoreTheme/pages/Main page.php'
+	$main_page = '/var/www/html_2/wp-content/themes/kartingStoreTheme/pages/Main page.php'
 ?>
 
 <body <?php body_class(); ?>>
@@ -52,12 +52,12 @@
 					<li class="nav-item dropdown">
 						<a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Alle categorieën </a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="/product-category/chassis-onderdelen/"> Chassis & onderdelen </a></li>
+							<!-- <li><a class="dropdown-item" href="/product-category/chassis-onderdelen/"> Chassis & onderdelen </a></li>
 							<li><a class="dropdown-item" href="/product-category/motoren-onderdelen/"> Motoren & onderdelen </a></li>
 							<li><a class="dropdown-item" href="/product-category/tandwielen-kettingen/"> Tandwielen & kettingen </a></li>
 							<li><a class="dropdown-item" href="/product-category/gereedschap/"> Gereedschap </a></li>
 							<li><a class="dropdown-item" href="/product-category/olie-smeermiddelen/"> Olie & smeermiddelen </a></li>
-							<li><a class="dropdown-item" href="/product-category/materialen/"> Bevestigingsmaterialen </a></li>
+							<li><a class="dropdown-item" href="/product-category/materialen/"> Bevestigingsmaterialen </a></li> -->
 						</ul>
 					</li>
 					<div>

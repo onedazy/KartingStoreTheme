@@ -12,8 +12,8 @@ get_header();
 		<div class="image-background">
 			<div class="container">
 				<div class="row justify-content-center">
-					<h1 class="text-center">De kartingstore van Nederland</h1>
-					<h2 class="text-center sub-title">Zoek hier kart onderdelen in ons assortiment</h2>
+					<h1 class="text-center">De sportiefste kleding winkel van Nederland</h1>
+					<h2 class="text-center sub-title">Zoek hier in ons assortiment</h2>
 					<div class="col-md-8 col-lg-4 col-12 g-2 g-md-0">
 						<form class="search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<div class="input-group">
@@ -29,7 +29,7 @@ get_header();
 			<div class="row">
 				<div class="col-12 col-lg-4 col-md-6 g-2 g-md-5">
 					<div class="main-category">
-						<a href="https://kartingstore.nl/product-category/chassis-onderdelen/">
+						<a href="https://frami-autosport.nl/product-category/chassis-onderdelen/">
 							<div class="textual p-4">
 								<h2>Chassis & onderdelen</h2>
 								<p class="icon d-flex align-content-center">
@@ -42,7 +42,7 @@ get_header();
 				</div>
 				<div class="col-12 col-lg-4 col-md-6 g-2 g-md-5">
 					<div class="main-category">
-						<a href="https://kartingstore.nl/product-category/motoren-onderdelen/">
+						<a href="https://frami-autosport.nl/product-category/motoren-onderdelen/">
 							<div class="textual p-4">
 								<h2>Motoren & onderdelen</h2>
 								<p class="icon d-flex align-content-center">
@@ -55,7 +55,7 @@ get_header();
 				</div>
 				<div class="col-12 col-lg-4 col-md-6 g-2 g-md-5">
 					<div class="main-category">
-						<a href="https://kartingstore.nl/product-category/tandwielen-kettingen/">
+						<a href="https://frami-autosport.nl/product-category/tandwielen-kettingen/">
 							<div class="textual p-4">
 								<h2>Tandwielen & kettingen</h2>
 								<p class="icon d-flex align-content-center">
@@ -69,7 +69,7 @@ get_header();
 
 				<div class="col-12 col-lg-4 col-md-6 g-2 g-md-5 d-none d-md-block">
 					<div class="main-category">
-						<a href="https://kartingstore.nl/product-category/gereedschap/">
+						<a href="https://frami-autosport.nl/product-category/gereedschap/">
 							<div class="textual p-4">
 								<h2>Gereedschappen</h2>
 								<p class="icon d-flex align-content-center">
@@ -82,7 +82,7 @@ get_header();
 				</div>
 				<div class="col-12 col-lg-4 col-md-6 g-2 g-md-5">
 					<div class="main-category">
-						<a href="https://kartingstore.nl/product-category/olie-smeermiddelen/">
+						<a href="https://frami-autosport.nl/product-category/olie-smeermiddelen/">
 							<div class="textual p-4">
 								<h2>Olie & smeermiddelen</h2>
 								<p class="icon d-flex align-content-center">
@@ -95,7 +95,7 @@ get_header();
 				</div>
 				<div class="col-12 col-lg-4 col-md-6 g-2 g-md-5 d-none d-md-block">
 					<div class="main-category">
-						<a href="https://kartingstore.nl/product-category/materialen/">
+						<a href="https://frami-autosport.nl/product-category/materialen/">
 							<div class="textual p-4">
 								<h2>Bevestigingsmaterialen</h2>
 								<p class="icon d-flex align-content-center">
@@ -110,7 +110,7 @@ get_header();
 		</div>
 		<div class="usp">
 			<div class="container">
-				<h2 class="text-center">Waarom kartingstore?</h2>
+				<h2 class="text-center">Waarom frami?</h2>
 				<div class="row">
 					<div class="col-12 col-md-4 usp-container package">
 						<div class="usp-icon">

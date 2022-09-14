@@ -84,7 +84,7 @@ get_header();
       <div class="col-12 col-md-5">
         <h2>Contact</h2>
         <div class="contactform">
-          <?php echo do_shortcode('[contact-form-7 id="316" title="Contactformulier 1"]') ?>
+          <?php echo do_shortcode('[contact-form-7 id="5" title="Contactformulier 1"]') ?>
         </div>
       </div>
     </div>
