@@ -733,6 +733,23 @@ body.admin-bar {
 	}
 }
 
+.woocommerce{
+	div.product {
+		div.images {
+			.flex-control-thumbs{
+				margin-top: 20px;
+				li{
+					width: 18%;
+					margin-right: 10px;
+				}
+				img{
+					border-radius: 15px;
+				}
+			}
+		}
+	} 
+} 
+
 
 
 /**
